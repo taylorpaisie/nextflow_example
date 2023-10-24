@@ -42,6 +42,9 @@ process TRIM {
 }
 
 workflow{
+  FASTQC(reads_ch)
+  FASTQC.out.view()
+
   TRIM(reads_ch)
   TRIM.out.view()
 }
